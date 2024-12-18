@@ -17,17 +17,16 @@ const tabTitle = Array.from(listTitle);
 
 function goToTitle(title){
     let posY = title.offsetTop;
+    console.log(posY);
 
     window.scrollTo({top: posY, behavior: "smooth"});
 }
 
-let queryTitle = prompt("Please select the Chapter you want to go to.", "2") - 1;
+let queryTitle = prompt("Please select the Chapter you want to go to.", "") - 1;
+console.log(queryTitle);
 
-if (queryTitle != null && queryTitle < tabTitle.length && queryTitle.length > 0) {
+if (queryTitle != null && queryTitle < tabTitle.length) {
     goToTitle(tabTitle[queryTitle]);
-}
-else{
-    alert("Please enter valid information on the Prompt.");
 }
 
 
