@@ -15,6 +15,12 @@ const tabTitle = Array.from(listTitle);
 //     });
 // });
 
+const btn1 = document.getElementById("btn1");
+
+btn1.addEventListener("click", function(){
+    console.log("Bouton Test Clické !");
+});
+
 function goToTitle(title){
     let posY = title.offsetTop;
     console.log(posY);
@@ -22,11 +28,20 @@ function goToTitle(title){
     window.scrollTo({top: posY, behavior: "smooth"});
 }
 
-let queryTitle = prompt("Please select the Chapter you want to go to.", "") - 1;
+let queryTitle = Number(window.prompt("Veuillez saisir un nombre.", "1")) - 1;
 console.log(queryTitle);
 
-if (queryTitle != null && queryTitle < tabTitle.length) {
-    goToTitle(tabTitle[queryTitle]);
+if (!queryTitle){
+    if (queryTitle < tabTitle.length) {
+        goToTitle(tabTitle[queryTitle]);
+    } else{
+        alert("Veuillez saisir un nombre.");
+    }
 }
+
+addEventListener("keypress", function(pressKey){
+    console.log(pressKey);
+});
+
 
 

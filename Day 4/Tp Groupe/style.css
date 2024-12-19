@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    .box{
+        display: flex;
+        justify-content: space-evenly;
+        .cutChoice{
+            display: flex;
+            align-items: center;
+            a{
+                display: flex;
+                justify-content: center;
+                img{
+                    height: 100px;
+                    width: auto;
+                }
+            }
+            
+            #face{
+                position: relative;
+                z-index: 1;
+            }
+
+            #haircut{
+                position: absolute;
+                z-index: 100;
+            }
+        }
+
+        .colorChoice{
+            display: flex;
+            flex-direction: column;
+
+            .colorBar{
+                display: flex;
+                justify-content: space-evenly;
+
+                .colorBox{
+                    width: 80px;
+                    height: 80px;
+                }
+
+                #color1{
+                    background-color: black;
+                }
+
+                #color2{
+                    background-color: gold;
+                }
+
+                #color3{
+                    background-color: turquoise;
+                }
+            }
+        }
+    }
+}
