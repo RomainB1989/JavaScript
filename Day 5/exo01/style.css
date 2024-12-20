@@ -1,0 +1,20 @@
+*{
+    transition: 1s;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    h1{
+        text-align: center;
+        font-size: 4em;
+        margin-top: 120px;
+        /* opacity: 0; */
+        cursor: pointer;
+    }
+
+    img{
+        display: none;
+    }
+}
