@@ -15,6 +15,16 @@ addEventListener("keypress", function(pressKey){
     }
 });
 
+
+// Modern Suntaxe event.key Touche Directionelle
+// const callback = {
+//     "ArrowLeft"  : leftHandler,
+//     "ArrowRight" : rightHandler,
+//     "ArrowUp"    : upHandler,
+//     "ArrowDown"  : downHandler,
+// }[event.key]
+// callback?.()
+
 function addParagraph(txt){
     const newTxt = document.createElement("p");
 
