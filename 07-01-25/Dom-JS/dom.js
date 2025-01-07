@@ -18,7 +18,7 @@ function addUserCard() {
     newCard.style.flexDirection = "column";
     newCard.style.justifySelf = "center";
     newCard.style.alignSelf = "center";
-    newCard.style.justifyContent = "space-around";
+    newCard.style.justifyContent = "space-evenly";
     newCard.style.color = "white";
     newCard.style.fontFamily = "Calibri";
     newCard.style.border = "solid";
@@ -67,7 +67,7 @@ function addUserCard() {
     newContent6.style.padding = "0px";
     newContent6.style.margin = "0px";
     
-    // ajoute les noeud elements au nouveau div créé
+    // ajoute les noeuds elements au nouvel div créé
     newCard.appendChild(newContent);
     newCard.appendChild(newContent1);
     newCard.appendChild(newContent2);
