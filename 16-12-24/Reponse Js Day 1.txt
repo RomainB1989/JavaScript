@@ -1,0 +1,36 @@
+Comment accéder à un index spécifique dans un tableau ?
+En utilisant une valeur de [0] pour la première et [tab.length - 1] pour la dernière.
+Ex: tab[0], tab[tab.length-1];
+
+Qu'est-ce que la concaténation ?
+C'est le fait de fusionner plusieurs (variables, chaine de caractère, nombres...etc) dans une chaine de caractère.
+
+Qu'est-ce que le modulo ?
+c'est le reste d'une division.
+
+Que fait push() ?
+Cela rajoute un case a la dernière place d'un tableau avec la valeur donné.
+Ex: tab.push(12).
+
+Que fait pop() ?
+Cela enlève le dernier element d'un tableau et retourne la valeur qui avait des cet element.
+
+À quoi sert le length ?
+Cela nous donne la taille d'un élément.
+Ex: "tab.length".
+
+Sur quoi peut-on utiliser le length ?
+On utiliser sur les tableau, les chaines de caractères.
+
+Peut-on assigner une valeur à un paramètre ?
+Oui
+
+Une fois une fonction qui console log un message "hello" créé, que faut-il faire ?
+Faut appeler la fonction pour qu'elle execute le code qu'elle contient.
+
+Qu'est-ce qu'une fonction anonyme ?
+C'est une fonction non nommée.
+
+Comment "désanonymer" une fonction anonyme ?
+En la stockant dans une variable.
+
