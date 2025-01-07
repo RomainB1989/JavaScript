@@ -67,7 +67,7 @@ function addUserCard() {
     newContent6.style.padding = "0px";
     newContent6.style.margin = "0px";
     
-    // ajoute les noeuds elements au nouvel div créé
+    // Ajoute les noeuds elements au nouvel div créé
     newCard.appendChild(newContent);
     newCard.appendChild(newContent1);
     newCard.appendChild(newContent2);
@@ -76,7 +76,7 @@ function addUserCard() {
     newCard.appendChild(newContent5);
     newCard.appendChild(newContent6);
   
-    // ajoute le nouvel élément créé et son contenu dans le DOM
+    // Ajoute le nouvel élément créé et son contenu dans le DOM
     document.body.append(newCard);
 }
 
