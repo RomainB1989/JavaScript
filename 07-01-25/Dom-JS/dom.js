@@ -80,5 +80,4 @@ function addUserCard() {
     document.body.append(newCard);
 }
 
-
 addUserCard();
