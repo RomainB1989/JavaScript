@@ -3,6 +3,7 @@ const title = document.querySelector("h1");
 title.style.cursor = "pointer";
 title.style.width = "15%";
 title.style.margin = "auto";
+title.style.marginTop = "20px";
 title.style.boxShadow = "0px 5px 10px 5px rgba(0,0,0,0.75)";
 title.style.textAlign = "center";
 
