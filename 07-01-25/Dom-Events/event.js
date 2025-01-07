@@ -2,10 +2,12 @@ const title = document.querySelector("h1");
 
 title.style.cursor = "pointer";
 title.style.width = "15%";
-title.style.boxShadow = "1px 1px 5px 5px rgba(0,0,0,0.75)";
+title.style.margin = "auto";
+title.style.boxShadow = "0px 5px 10px 5px rgba(0,0,0,0.75)";
 title.style.textAlign = "center";
 
 title.addEventListener("click", function(){
+    // title.innerText == "D.O.M Events" ? "-- 🥳 --" : "D.O.M Events";
     if(title.innerText == "D.O.M Events"){
         title.innerText = "-- 🥳 --";
     }
