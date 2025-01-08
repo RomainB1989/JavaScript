@@ -1,0 +1,32 @@
+body{
+    padding: 0px;
+    margin: 0px;
+
+    h1{
+        text-align: center;
+    }
+
+    #center{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        div{
+            padding: 10px 10px;
+            width: 40%;
+            height: auto;
+        }
+    
+        #div1{
+            background-color: lightblue;
+            textarea{
+                width: 80%;
+                padding: 4px 4px;
+            }
+        }
+    
+        #div2{
+            background-color: lightsalmon;
+        }
+    }
+}
