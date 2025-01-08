@@ -5,7 +5,7 @@ console.log(textarea);
 textarea.value = localStorage.getItem("text");
 div2.innerHTML = textarea.value;
 
-textarea.addEventListener('keyup', function(event){
+textarea.addEventListener('keyup', function(){
     console.log(textarea.value);
     addText(textarea.value);
 });
@@ -15,3 +15,4 @@ function addText(value){
     localStorage.setItem("text", value);
     div2.innerHTML = marked(value);
 }
+
