@@ -1,0 +1,30 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: lightgreen;
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .apiContainer{
+        width: 40%;
+        margin: auto;
+    }
+
+    .apiContainer2{
+        width: 100%;
+        height : auto;
+        display: grid;
+        padding: 20px 20px;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
