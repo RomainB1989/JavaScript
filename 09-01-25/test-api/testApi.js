@@ -70,17 +70,39 @@ const contactApiSecure =  async () => {
         pokemonType.style.textAlign = "center";
         pokemonWeight.style.textAlign = "center";
         pokemonSize.style.textAlign = "center";
+        
+        buttonLink.style.width = "60%";
+        buttonLink.style.margin = "auto";
+        buttonLink.style.padding = "2px 2px";
+        buttonLink.style.backgroundColor = "blue";
+        buttonLink.style.color = "white";
+        buttonLink.style.border = "solid";
+        buttonLink.style.borderWidth = "2px";
+        buttonLink.style.borderColor = "black";
+        buttonLink.style.borderRadius = "10px";
 
         imgPokemon.src = Pokemon.sprites.regular;
         newPokemon.appendChild(imgPokemon);
+
         pokemonName.innerText = Pokemon.name.fr;
         newPokemon.appendChild(pokemonName);
-        pokemonType.innerText = 'Type : '+Pokemon.types[0].name+'.';
+
+        pokemonType.innerText = 'Type : ';
+        Pokemon.types.forEach(function(Type){
+            pokemonType.innerText += Type.name+' ';
+        });
         newPokemon.appendChild(pokemonType);
+        
         pokemonWeight.innerText = 'Poids : '+Pokemon.weight+'.';
         newPokemon.appendChild(pokemonWeight);
+        
         pokemonSize.innerText = 'Taille : '+Pokemon.height+'.';
         newPokemon.appendChild(pokemonSize);
+        
+        buttonLink.type = "button";
+        buttonLink.innerText = "En Savoir Plus !";
+        buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
+        newPokemon.appendChild(buttonLink);
 
         apiDiv2.appendChild(newPokemon);
     });
