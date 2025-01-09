@@ -116,10 +116,10 @@ const contactApiSecure =  async () => {
         
         pokemonSize.innerText = 'Taille : '+Pokemon.height+'.';
         newPokemon.appendChild(pokemonSize);
+        // buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
         
         buttonLink.type = "button";
         buttonLink.innerText = "En Savoir Plus !";
-        // buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
         newPokemon.appendChild(buttonLink);
         buttonLink.addEventListener("click", () => {
             window.open(href=`https://www.pokepedia.fr/${Pokemon.name.fr}`, "_blank");
