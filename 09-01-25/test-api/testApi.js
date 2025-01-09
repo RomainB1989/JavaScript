@@ -104,9 +104,12 @@ const contactApiSecure =  async () => {
         
         buttonLink.type = "button";
         buttonLink.innerText = "En Savoir Plus !";
-        buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
+        // buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
         newPokemon.appendChild(buttonLink);
-
+        buttonLink.addEventListener("click", () => {
+            console.log(`https://www.pokepedia.fr/${Pokemon.name.fr}`);
+            window.open.href=`https://www.pokepedia.fr/${Pokemon.name.fr}`;
+        });
         apiDiv2.appendChild(newPokemon);
     });
 }
