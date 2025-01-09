@@ -13,11 +13,11 @@ const contactApi =  async () => {
     console.log(dataTransformed);
     apiDiv.innerText = 'Coordonnée Gps de Toulouse :'+'\n'+'Latitude : '+dataTransformed.latitude+'\n'+'Longitude : '+dataTransformed.longitude + '\nElevation : '+ dataTransformed.elevation +'\nA Midi il fera ' + dataTransformed.hourly.temperature_2m[12] + dataTransformed.hourly_units.temperature_2m +'\n';
 };
-
 contactApi();
 
+
 const contactApiSecure =  async () => {
-    const rawData = await fetch('https://tyradex.vercel.app/api/v1/gen/9');
+    const rawData = await fetch('https://tyradex.vercel.app/api/v1/gen/1');
     console.log(rawData);
     
     // Vérification du statut de la réponse
@@ -84,12 +84,18 @@ const contactApiSecure =  async () => {
         pokemonName.innerText = Pokemon.name.fr;
         newPokemon.appendChild(pokemonName);
 
+
+
         pokemonType.innerText = 'Type : ';
         Pokemon.types.forEach(function(Type){
-            pokemonType.innerText += Type.name+' ';
+            pokemonType.innerText += Type.name +' ';
         });
         newPokemon.appendChild(pokemonType);
         
+
+
+
+
         pokemonWeight.innerText = 'Poids : '+Pokemon.weight+'.';
         newPokemon.appendChild(pokemonWeight);
         
