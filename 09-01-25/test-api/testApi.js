@@ -16,6 +16,14 @@ const contactApi =  async () => {
 contactApi();
 
 
+/**
+ * 
+ * 
+ *
+ * @async
+ * @returns {*} 
+ */
+
 const contactApiSecure =  async () => {
     const rawData = await fetch('https://tyradex.vercel.app/api/v1/gen/1');
     console.log(rawData);
@@ -31,6 +39,7 @@ const contactApiSecure =  async () => {
     const tabPokemon = Array.from(transformedData);
 
     tabPokemon.forEach(function(Pokemon, index){
+        
         // Creation Elements
         const newPokemon = document.createElement("div");
         const imgPokemon = document.createElement("img");
@@ -40,6 +49,7 @@ const contactApiSecure =  async () => {
         const pokemonSize = document.createElement("p");
         const buttonLink = document.createElement("button");
         
+        // Variable pour le placement dans la grid.
         const nbRow = index / 7 + 1;
         const nbCol = index % 7;
 
@@ -53,7 +63,10 @@ const contactApiSecure =  async () => {
         newPokemon.style.borderColor = "red";
         newPokemon.style.borderWidth = "4px";
         newPokemon.style.borderRadius = "10px";
+        
+        // Placement de chaque div dans le css grid avec les variables utilisé en amont.
         newPokemon.style.gridArea = `${nbRow} / ${nbCol} / ${nbRow + 1} / ${nbCol + 1}`;
+
         newPokemon.style.display = "flex";
         newPokemon.style.flexDirection = "column";
         newPokemon.style.justifyContent = "space-evenly";
@@ -79,6 +92,8 @@ const contactApiSecure =  async () => {
         buttonLink.style.borderRadius = "10px";
 
         imgPokemon.src = Pokemon.sprites.regular;
+        imgPokemon.alt = Pokemon.name.fr;
+        imgPokemon.title = Pokemon.name.fr;
         newPokemon.appendChild(imgPokemon);
 
         pokemonName.innerText = Pokemon.name.fr;
@@ -107,8 +122,7 @@ const contactApiSecure =  async () => {
         // buttonLink.onclick = `window.location.href="https://www.pokepedia.fr/${Pokemon.name.fr}"`;
         newPokemon.appendChild(buttonLink);
         buttonLink.addEventListener("click", () => {
-            console.log(`https://www.pokepedia.fr/${Pokemon.name.fr}`);
-            window.open.href=`https://www.pokepedia.fr/${Pokemon.name.fr}`;
+            window.open(href=`https://www.pokepedia.fr/${Pokemon.name.fr}`, "_blank");
         });
         apiDiv2.appendChild(newPokemon);
     });
