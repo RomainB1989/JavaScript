@@ -2,9 +2,6 @@ const apiDiv = document.querySelector('.apiContainer');
 const apiDiv2 = document.querySelector('.apiContainer2');
 
 //de base une ƒ° => est anonyme, astuce pour désanonymiser, on la stocke dans une variable.
-console.log(apiDiv);
-console.log(apiDiv2);
-
 const contactApi =  async () => {
     //Data va récup Toutes les données de l'api
     const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=43.6043&longitude=1.4437&hourly=temperature_2m');
