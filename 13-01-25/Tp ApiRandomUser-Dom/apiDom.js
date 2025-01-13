@@ -23,15 +23,16 @@ const contactApiSecure =  async () => {
   }
 
   const transformedData = await rawData.json();
+  const userData = transformedData.results[0];
 
   const user = {
-    firstName: transformedData.results[0].name.first,
-    lastName: transformedData.results[0].name.last,
-    gender: transformedData.results[0].name.title,
-    email: transformedData.results[0].email,
-    adress: `${transformedData.results[0].location.street.number} - ${transformedData.results[0].location.street.name} (${transformedData.results[0].location.city} - ${transformedData.results[0].location.state} - ${transformedData.results[0].location.country})`,
-    phone: transformedData.results[0].phone ,
-    img: transformedData.results[0].picture.large
+    firstName: userData.name.first,
+    lastName: userData.name.last,
+    gender: userData.name.title,
+    email: userData.email,
+    adress: `${userData.location.street.number} - ${userData.location.street.name} (${userData.location.city} - ${userData.location.state} - ${userData.location.country})`,
+    phone: userData.phone ,
+    img: userData.picture.large
   };
 
   addUserCard(user);
