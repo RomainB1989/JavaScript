@@ -6,11 +6,12 @@ class Imc {
     }
 
     calculImc() {
-        return(this.userWeight/(this.userSize ** 2));
+        // let imc = (this.userWeight/(this.userSize ** 2)).toFixed(2);
+        return (this.userWeight/(this.userSize ** 2)).toFixed(2);
     }
 
     display(){
-        console.log("Bonjour "+ this.userName +"("+this.userWeight+", "+this.userSize+") a un Imc de : "+this.calculImc());
+        console.log("Bonjour, "+ this.userName +"("+this.userWeight+"kg, "+this.userSize+"M) a un Imc de : "+this.calculImc());
     }
 }
 
