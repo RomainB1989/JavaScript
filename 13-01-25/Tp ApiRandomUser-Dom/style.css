@@ -16,7 +16,7 @@
         justify-content: space-between;
         align-items: center;
         img{
-            width: 150px;
+            width: 300px;
             height: auto;
         }
 
@@ -30,10 +30,11 @@
         p{
             margin: 5px 0px;
             text-align: center;
-            font-size: 20px
+            font-size: 20px;
         }
 
         button{
+            font-size: 20px;
             padding: 5px 10px;
             margin-top: 5px;
             margin-bottom: 10px;
