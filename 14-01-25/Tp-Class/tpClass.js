@@ -14,7 +14,7 @@ class CompteBancaire {
     retirer(value) {
         try{
             if ((this.money - value) < 0) {
-                throw `Erreur Custom----->${this.nameUser}, retrait: ${value} refusé avec solde: ${this.money}`;
+                throw `${this.nameUser}, retrait: ${value} refusé avec solde: ${this.money}`;
             }
             else{
                 this.money -= value;
@@ -22,7 +22,7 @@ class CompteBancaire {
             }
         }
         catch(err){
-            console.log(err);
+            console.log("Erreur Custom----->"+err);
         }
     }
     
@@ -30,7 +30,7 @@ class CompteBancaire {
     virer(value, CompteDestinataire) {
         try{
             if ((this.money - value) < 0) {
-                throw `Erreur Custom----->${this.nameUser}, retrait: ${value} refusé avec solde: ${this.money}`;
+                throw `${this.nameUser}, retrait: ${value} refusé avec solde: ${this.money}`;
             }
             else{
                 console.log(`Virement de: ${value} de ${this.nameUser} vers: ${CompteDestinataire.nameUser}`);
@@ -39,7 +39,7 @@ class CompteBancaire {
             }
         }
         catch(err){
-            console.error(err);
+            console.error("Erreur Custom----->"+err);
         }
     }
 
