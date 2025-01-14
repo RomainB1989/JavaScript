@@ -3,6 +3,7 @@ class CompteBancaire {
         this.nameUser = User;
         this.money = 0;
     }
+    
     // Ajoute un montant au solde
     crediter(value) {
         this.money += value;
