@@ -16,11 +16,17 @@ info.style.padding = "16px 12px 24px 12px";
 cardMeteo.insertBefore(info, button);
 
 
+/**
+ * Fonction qui affiche dans la div "info" les chaines de caractère qu'on lui envoie.
+ *  
+ * @param {*} str 
+ */
 function addinfo(str){
     info.innerText = str;
     bouton();
 }
 
+/** Fonction qui donne un nom de class au bouton */
 function bouton(){
     button.setAttribute("class", "button__cardMeteo");
 }
@@ -37,8 +43,12 @@ button.addEventListener("click", function(){
     contactApiSecure();
 });
 
-
-// function asynchrone avec gestion d'erreur qui contact l'API méteo, récupère les infos et les ajoute a la div "info".
+/**
+ * Function asynchrone avec gestion d'erreur qui contact l'API méteo, récupère les infos et les ajoute a la div "info".
+ *
+ * @async
+ * @returns {*} 
+ */
 const contactApiSecure =  async () => {
     const rawData = await fetch('https://prevision-meteo.ch/services/json/toulouse');
 
