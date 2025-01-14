@@ -1,5 +1,8 @@
 export function darkMode(){
     const html = document.querySelector("html");
-
-    html.setAttribute('data-bs-theme', 'dark');
+    if(html.getAttribute('data-bs-theme') == 'light'){
+        html.setAttribute('data-bs-theme', 'dark');
+    } else {
+        html.setAttribute('data-bs-theme', 'light');
+    }
 }
