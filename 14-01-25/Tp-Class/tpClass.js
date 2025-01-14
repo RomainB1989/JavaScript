@@ -3,7 +3,7 @@ class CompteBancaire {
         this.nameUser = User;
         this.money = 0;
     }
-    
+
     // Ajoute un montant au solde
     crediter(value) {
         this.money += value;
@@ -25,7 +25,8 @@ class CompteBancaire {
             console.log(err);
         }
     }
-
+    
+    // Virement d'un montent vers un compte Destinataire
     virer(value, CompteDestinataire) {
         try{
             if ((this.money - value) < 0) {
